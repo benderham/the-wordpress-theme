@@ -1,0 +1,26 @@
+# Ignore everything to do with WordPress including built theme
+app/wordpress/
+
+# Package Dependencies
+npm-debug.log
+bower_components/
+node_modules/
+
+# SASS
+.sass-cache
+*.css.map
+
+# OSX Stuff
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must ends with two \r.
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes

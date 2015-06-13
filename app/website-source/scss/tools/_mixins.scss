@@ -1,0 +1,44 @@
+/**
+ * Mixins
+ */
+@mixin hi-res {	
+	// This is the very long but bulletproof media query for high resolution displays.
+	@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+		@content
+	}
+}
+
+@mixin reset-list {
+	padding: 0;
+  margin: 0;
+  list-style: none;
+  list-style-image: none;
+}
+
+@mixin transition {
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+@mixin colour-transition {
+  -webkit-transition: color 300ms ease-in-out;
+  -moz-transition: color 300ms ease-in-out;
+  -ms-transition: color 300ms ease-in-out;
+  -o-transition: color 300ms ease-in-out;
+  transition: color 300ms ease-in-out;
+}
+
+/** 
+ * Placeholders
+ */
+%clearfix {
+	display: inline-block;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

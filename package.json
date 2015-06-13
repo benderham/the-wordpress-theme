@@ -1,0 +1,23 @@
+{
+  "name": "wordpress-project",
+  "version": "1.0.0",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-autoprefixer": "^2.2.0",
+    "grunt-browser-sync": "^1.9.1",
+    "grunt-combine-media-queries": "^1.0.19",
+    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-copy": "^0.7.0",
+    "grunt-contrib-cssmin": "^0.11.0",
+    "grunt-contrib-imagemin": "^0.9.2",
+    "grunt-contrib-jshint": "^0.11.0",
+    "grunt-contrib-sass": "^0.8.1",
+    "grunt-contrib-uglify": "^0.7.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-newer": "^1.1.0",
+    "load-grunt-tasks": "^2.0.0",
+    "node-bourbon": "^1.2.3",
+    "node-neat": "^1.4.2",
+    "time-grunt": "^1.0.0"
+  }
+}

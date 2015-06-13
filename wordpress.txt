@@ -1,0 +1,7 @@
+=== WordPress Version ===
+WordPress 4.1
+
+=== Database Connection Details ===
+wp core config --dbname=database_name --dbuser=root --dbpassword=root --dbhost=127.0.0.1
+
+=== Required Plugins ===

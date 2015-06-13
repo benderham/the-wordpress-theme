@@ -1,0 +1,7 @@
+{
+  "name": "wordpress-website",
+  "version": "1.0.0",
+  "dependencies": {
+    "modernizr": "~2.8.3",
+  }
+}
