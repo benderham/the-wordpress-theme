@@ -115,7 +115,7 @@ module.exports = function(grunt) {
 			develop: {
 				options: {
 					style: 'expanded',
-					loadPath: require('node-bourbon').includePaths,
+					//loadPath: require('node-bourbon').includePaths,
           loadPath: require('node-neat').includePaths
 				},
 				files: {
@@ -220,7 +220,7 @@ module.exports = function(grunt) {
 					src: ['<%= globalConfig.build %>/css/main.css', '<%= globalConfig.build %>/js/*.js','<%= globalConfig.build %>/images/**/*.{jpg,jpeg,png,gif,svg}']
 				},
 				options: {
-					proxy: "dev.websiteurl.com",
+					proxy: "dev.wordpressproject",
 					watchTask: true
 				}
 			}

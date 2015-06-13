@@ -76,7 +76,7 @@ Clone this GIT Repository. [Don't know how?](https://confluence.atlassian.com/di
 
 ###Local Development Environment 
   
-Prepare a local development environment inside `longtail-site/app/wordpress/`, using your favourite local environment tool.   
+Prepare a local development environment inside `app/wordpress/`, using your favourite local environment tool.   
   
 ***IMPORTANT: Only set up your Working Environment (Virtual Host, Folder Location, PHP Version) and Import Database. Install WordPress using WP-CLI and information in wordpress.txt in the next step.***
 
