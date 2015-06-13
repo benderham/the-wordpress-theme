@@ -91,7 +91,7 @@ Install WordPress using WP-CLI and the information on `wordpress.txt`
 	$ wp core download --version=x.xx
 	$ wp core config --dbname=database_name --dbuser=root --dbpass=password --dbhost=127.0.0.1
 	
-If for some reason configuring on the command line does not work, then go to `http://localhost/longtail-site` and configure using the WordPress GUI.
+If for some reason configuring on the command line does not work, then configure using the WordPress GUI.
 
 ###Run Grunt
 
@@ -104,7 +104,7 @@ The `Gruntfile.js` is commented throughout, each module used is well documented.
 
 ## Important Notes
 ***
-Only the contents of `longtail-project/ root` (except `bower_components/` and `node_modules/`) and `app/longtail-theme-source/` are kept under version control. This is so that WordPress and compiled files are not commited to the repository. 
+Only the contents of `wordpress-project/ root` (except `bower_components/` and `node_modules/`) and `app/wordpress-theme-source/` are kept under version control. This is so that WordPress and compiled files are not commited to the repository. 
 
 If you wish to preview and test the production version of the site you should run the Build Grunt Process. 
 
