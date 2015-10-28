@@ -115,8 +115,7 @@ module.exports = function(grunt) {
 			develop: {
 				options: {
 					style: 'expanded',
-					//loadPath: require('node-bourbon').includePaths,
-          loadPath: require('node-neat').includePaths
+					loadPath: require('node-bourbon').includePaths
 				},
 				files: {
 					'<%= globalConfig.build %>/css/main.css': '<%= globalConfig.src  %>/scss/main.scss'

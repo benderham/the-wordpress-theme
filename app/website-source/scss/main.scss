@@ -3,8 +3,6 @@
  */
 // http://bourbon.io/docs/
 @import 'bourbon';
-// http://thoughtbot.github.io/neat-docs/latest/
-@import 'neat';
 
 /**
  * Tools
@@ -16,8 +14,8 @@
  * Base
  */
 @import 'base/normalize';
-@import 'base/base';
 @import 'base/fonts';
+@import 'base/base';
 
 /**
  * Layout
