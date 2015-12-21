@@ -5,7 +5,7 @@ WP_PATH='/home/Longtail/Websites/wordpress/'
 
 # configuration
 PLUGINS=('hello-dolly' 'contact-form-7' 'really-simple-captcha')
-WP_VERSION='4.3'
+WP_VERSION='4.4'
 
 # installing npm packages
 sudo npm install
