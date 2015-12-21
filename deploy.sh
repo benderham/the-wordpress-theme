@@ -8,12 +8,12 @@ PLUGINS=('hello-dolly' 'contact-form-7')
 WP_VERSION='4.4'
 
 # installing npm packages
-#sudo npm install
-#sudo bower install --allow-root
-#sudo grunt build
+sudo npm install
+sudo bower install --allow-root
+sudo grunt build
 
 #copy wp-content
-#sudo cp -Rv app/wordpress/wp-content/ $WP_PATH
+sudo cp -Rv app/wordpress/wp-content/ $WP_PATH
 
 #go to the worpress root folder
 cd $WP_PATH
