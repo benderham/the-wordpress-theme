@@ -1,0 +1,39 @@
+# wordpress paths
+WP_PATH = '/home/Longtail/Websites/wordpress/'
+
+# configuration
+PLUGINS = ('hello-dolly', 'contact-form-7')
+WP_VERSION = '4.4'
+
+# installing npm packages
+sudo npm install
+sudo bower install --allow-root
+sudo grunt build
+
+#copy wp-content
+sudo cp -Rv app/wordpress/wp-content/ $WP_PATH
+
+#go to the worpress root folder
+cd $WP_PATH
+
+#check wordpress version
+echo 'Check WP version...'
+echo 'Current version is ' $(wp core version)
+if [$(wp core version) != '$WP_VERSION'] then
+	echo 'Updating Wordpress to the version:' $WP_VERSION
+	sudo wp core update --version=$WP_VERSION --force
+else
+	echo 'Worpress version is up-to-date'
+fi
+
+#install plugins for wordpress
+for i in "${PLUGINS[@]}"
+do
+	if ! $(wp plugin is-installed $i); then
+		echo 'Installing plugin $i'
+		sudo wp plugin is-installed $i --allow-root
+	else
+		echo 'Plugin $i is installed'
+	fi
+done
+
