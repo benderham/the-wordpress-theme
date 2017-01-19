@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # wordpress paths
-WP_PATH='/home/Longtail/Websites/wordpress/'
+WP_PATH='/path/to/wordpress/'
 
 # configuration
 PLUGINS=('hello-dolly' 'contact-form-7' 'really-simple-captcha')
