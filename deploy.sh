@@ -1,3 +1,5 @@
+## WORK IN PROGRESS
+
 #!/bin/bash
 
 # wordpress paths

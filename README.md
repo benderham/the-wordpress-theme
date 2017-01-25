@@ -9,16 +9,11 @@ Any bugs, issues, questions, suggestions, praise (sorry complaints department cl
 ### Included Bits and Pieces
 [jQuery](http://www.jquery.com) - Queued up, just the way WordPress likes it to be.
 [Modernizr](http://modernizr.com)  
-[Bourbon](http://bourbon.io/docs/)
 
 ### Recommended Coding Standards and Documentation
 [HTML5](http://html5doctor.com/element-index/)
 
 [SASS](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
-
-[SMACSS - Scalable and Modular Architecture for CSS](https://smacss.com/) - SASS structure in this project is 'loosely' based on SMACSS.
-
-[Organising CSS Declarations](http://benoitburgener.ch/blog/organize-your-css-declarations/)
 
 ###Folder Structure
 	
@@ -42,18 +37,15 @@ Any bugs, issues, questions, suggestions, praise (sorry complaints department cl
 	---------- the-theme/
 
 ### Important Files
-`Gruntfile.js`  
-Configuration of Grunt tasks.
+`gulpfile.js` and '/gulp'
+Configuration of Gulp tasks.
 
 `package.json`  
 Configuration of node dependencies.
 
-`bower.json`  
-Configuration of bower dependencies.
-
 `wordpress.txt`  
+Experimental file for testing a WIP deploy script.  
 Details of the WordPress installation including: Version Number, Local Database Connection Details and Plugins. Use this file to determine the settings for your local installation. **Updated WordPress or installed a plugin?? UPDATE THIS FILE TOO!**
-
 
 ### Build Tools & Preprocessors
 
@@ -64,15 +56,11 @@ An extension of CSS that adds power and elegance to the basic language. It allow
 
 npm makes it easy for JavaScript developers to share and reuse code, and it makes it easy to update the code that you're sharing.
 
-**[Grunt](http://gruntjs.com/getting-started)**  
+**[Gulp](http://gulpjs.com/)**  
 Automates tasks such as minification, concatenation, compression, compilation, browser refreshing etc.
 
-**[Bower](http://bower.io/#getting-started)**  
-Bower works by fetching and installing packages from all over, taking care of hunting, finding, downloading, and saving the stuff you’re looking for.
-
-**[WP-CLI](http://wp-cli.org)**  
+**Recommended: [WP-CLI](http://wp-cli.org)**  
 WP-CLI is a set of command-line tools for managing WordPress installations. You can update plugins, set up multisite installs and much more, without using a web browser.
-
 
 ### JavaScript Libraries Used
 [jQuery](http://www.jquery.com)  
@@ -107,35 +95,29 @@ Install WordPress using WP-CLI and the information on `wordpress.txt`
 	
 If for some reason configuring on the command line does not work, then configure using the WordPress GUI.
 
-### Run Bower Install
-
-	$ bower install
-
-### Run NPM Install
+### Run NPM Install (or why not try Yarn?)
 
 	$ npm install
 
-### Run Grunt
+### Run Gulp
 
-Run the default grunt task and start developing! 
+Run the default gulp task and start developing! 
 	
-	$ grunt
-
-The `Gruntfile.js` is commented throughout, each module used is well documented.
+	$ gulp
 
 
 ## Important Notes
 ***
-Only the contents of `wordpress-project/ root` (except `bower_components/` and `node_modules/`) and `app/wordpress-theme-source/` are kept under version control. This is so that WordPress and compiled files are not commited to the repository. 
+Only the contents of `wordpress-project/ root` (except `node_modules/`) and `app/wordpress-theme-source/` are kept under version control. This is so that WordPress and compiled files are not commited to the repository. 
 
 If you wish to preview and test the production version of the site you should run the Build Grunt Process. 
 
-	$ grunt build
-
-
+	$ gulp build:production
 
 ## Changelog
 ***
+**v2.0** - Migrated to Gulp instead of Grunt.
+
 **v1.1** - A few minor tweaks to README.md and removal of Bourbon Neat, in favour of using flexbox for layouts.
 
 **v1.0** - Nothing has changed yet! We are only just getting this party started!

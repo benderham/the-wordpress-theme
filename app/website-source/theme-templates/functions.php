@@ -84,7 +84,6 @@ function the_assets() {
 		wp_register_style('main', get_stylesheet_directory_uri() . '/css/main.css');
 			
 		// Global Scripts
-		wp_register_script('vendor', get_stylesheet_directory_uri() . '/js/vendor.js', array(), '0', true);
 		wp_register_script('scripts', get_stylesheet_directory_uri() . '/js/main.js',  array(), '0', true);
 			
 		// Enqueue Stylesheets
@@ -92,7 +91,6 @@ function the_assets() {
 			
 		// Enqueue Javascripts
 		wp_enqueue_script('jquery');
-		wp_enqueue_script('vendor');
 		wp_enqueue_script('scripts');			
 	}
 }
