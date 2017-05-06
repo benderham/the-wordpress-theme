@@ -1,0 +1,17 @@
+$main-color: #ffffff;
+$secondary-color: #000000;
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+$default-font: 'Lato', sans-serif;
+
+$light-font: 300;
+$normal-font: 400;
+$bold-font: 700;
+
+$spacing-unit--x-small: 20px;
+$spacing-unit--small: 55px;
+$spacing-unit--medium: 80px;
+$spacing-unit--large: 140px;
+$spacing-unit--x-large: 240px;
+
+$breakpoints: (small: 320px, medium: 768px, large: 960px, x-large: 1280px);

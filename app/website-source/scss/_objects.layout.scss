@@ -1,0 +1,40 @@
+.layout {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+
+  @include media(">=medium") {
+    flex-flow: row wrap;
+    align-items: flex-start;
+  }
+}
+
+.layout__item {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.layout__item--half {
+  @include media(">=medium") {
+    flex: 0 0 50%;
+  }
+}
+
+.layout__item--third {
+  @include media(">=medium") {
+    flex: 0 0 33.3%;
+  }
+}
+
+.layout__item--quarter {
+  @include media(">=medium") {
+    flex: 0 0 25%;
+  }
+}
+
+.layout__item--fifth {
+  @include media(">=medium") {
+    flex: 0 0 20%;
+  }
+}

@@ -10,6 +10,7 @@ gulp.task('build', function(cb) {
     [
       'modernizr',
       'scss',
+      'vendor-scripts',
       'scripts',
       'images',
       'favicons',
@@ -25,6 +26,7 @@ gulp.task('build:production', function(callback) {
     [
       'modernizr',
       'scss',
+      'vendor-scripts',
       'scripts',
       'images',
       'favicons',

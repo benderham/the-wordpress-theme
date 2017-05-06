@@ -3,10 +3,14 @@ var build = 'app/wordpress/wp-content/themes/the-theme/';
 
 module.exports = {
 
-  browsersync: {
+browsersync: {
     development: {
-      server: {
-        baseDir: [build]
+      // server: {
+      //   baseDir: [build]
+      // },
+      proxy: {
+        target: "http://wordpress.dev",
+        ws: true
       },
       port: 8080,
       files: [
@@ -31,6 +35,11 @@ module.exports = {
   pug: {
     src:  src + '/pug/**/*.pug',
     dest: build
+  },
+
+  vendorScripts: {
+    src: [],
+    dest: build + '/js/vendor'
   },
 
   autoprefixer: {
@@ -68,10 +77,14 @@ module.exports = {
 
   svg: {
     src: src + '/svg/*.svg',
-    dest: src + '/svg',
+    dest: build,
+    svg: {
+      xmlDeclaration: false,
+      doctypeDeclaration: false
+    },
     mode: {
       symbol: {
-        dest: '.',
+        dest: './images',
         sprite: 'svg-sprite.svg'
       }
     }
@@ -81,7 +94,8 @@ module.exports = {
     sass: src + '/scss/**/*.{sass,scss}',
     images:  src + '/images/**/*',
     scripts: src + '/js/**/*',
-    templates: src + '/theme-templates/**/*'
+    templates: src + '/theme-templates/**/*',
+    svg: src + '/svg/**/*'
   },
 
   favicons: {
