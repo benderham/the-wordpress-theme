@@ -1,5 +1,5 @@
 # Ignore WordPress Uploads.
-_app/wordpress/wp-content/uploads/
+_app/wordpress/
 
 # Package Dependencies
 npm-debug.log
