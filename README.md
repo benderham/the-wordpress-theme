@@ -48,10 +48,6 @@ Configuration of node dependencies.
 **[SASS](http://sass-lang.com/guide)**  
 An extension of CSS that adds power and elegance to the basic language. It allows to use variables, nested rules, mixins, inline imports, and more.
 
-**[NPM](https://docs.npmjs.com/)**
-
-npm makes it easy for JavaScript developers to share and reuse code, and it makes it easy to update the code that you're sharing.
-
 **[Gulp](http://gulpjs.com/)**  
 Automates tasks such as minification, concatenation, compression, compilation, browser refreshing etc.
 
@@ -71,21 +67,14 @@ Make sure that your machine has **ALL** of the Build Tools and Preprocessors set
 
 Clone this GIT Repository. [Don't know how?](https://confluence.atlassian.com/display/BITBUCKET/Clone+a+repository)
 
-
 ### Local Development Environment 
   
 [VCCW](http://vccw.cc/)
 
 #### Configuration
 
-1. Copy `provision/default.yml` to `site.yml`.
 1. Edit the `site.yml`.
-1. Run `vagrant up`.
-
-#### Note
-
-* The `site.yml` has to be in the same directory with Vagrantfile.
-* You can put difference to the `site.yml`.
+2. Run `vagrant up`.
 
 ### Run NPM Install (or why not try Yarn?)
 

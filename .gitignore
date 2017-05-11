@@ -3,7 +3,6 @@ _app/wordpress/
 
 # Package Dependencies
 npm-debug.log
-bower_components/
 node_modules/
 
 # SASS
@@ -28,9 +27,9 @@ Icon
 # VS Code
 .vscode
 
-# VCCW
-.bundle
-.travis.yml
+# Vagrant/VCCW
 .vagrant
+.ansible
+.bundle
 package.box
 playbook.retry

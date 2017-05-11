@@ -104,7 +104,7 @@ reset_db_on_provision: true
 #
 ruby_gems:
   - bundler
-  # - wordmove
+  - wordmove
 
 mailcatcher: true
 
@@ -131,7 +131,7 @@ composers:
 # wp-cli package commands
 #
 wp_cli_packages:
- #  - vccw/wp-cli-scaffold-movefile:@stable
+  - vccw/wp-cli-scaffold-movefile:@stable
 
 #
 # Linked Clone for Vagrant v1.8
@@ -162,5 +162,5 @@ php_ini:
   xdebug.remote_connect_back: true
   xdebug.remote_autostart: true
 
-synced_folder: _app/wordpress
+synced_folder: _site/wordpress
 document_root: /var/www/html
