@@ -1,5 +1,5 @@
-# Ignore everything to do with WordPress including built theme
-app/wordpress/
+# Ignore WordPress Uploads.
+_app/wordpress/wp-content/uploads/
 
 # Package Dependencies
 npm-debug.log
@@ -27,3 +27,10 @@ Icon
 
 # VS Code
 .vscode
+
+# VCCW
+.bundle
+.travis.yml
+.vagrant
+package.box
+playbook.retry

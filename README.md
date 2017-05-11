@@ -43,10 +43,6 @@ Configuration of Gulp tasks.
 `package.json`  
 Configuration of node dependencies.
 
-`wordpress.txt`  
-Experimental file for testing a WIP deploy script.  
-Details of the WordPress installation including: Version Number, Local Database Connection Details and Plugins. Use this file to determine the settings for your local installation. **Updated WordPress or installed a plugin?? UPDATE THIS FILE TOO!**
-
 ### Build Tools & Preprocessors
 
 **[SASS](http://sass-lang.com/guide)**  
@@ -78,22 +74,18 @@ Clone this GIT Repository. [Don't know how?](https://confluence.atlassian.com/di
 
 ### Local Development Environment 
   
-Prepare a local development environment inside `app/wordpress/`, using your favourite local environment tool.   
-  
-***IMPORTANT: Only set up your Working Environment (Virtual Host, Folder Location, PHP Version) and Import Database. Install WordPress using WP-CLI and information in wordpress.txt in the next step.***
+[VCCW](http://vccw.cc/)
 
-[MAMP/MAMP Pro - OSX](http://codex.wordpress.org/Installing_WordPress_Locally_on_Your_Mac_With_MAMP)  
-[WampServer - Windows](https://make.wordpress.org/core/handbook/installing-a-local-server/installing-wampserver/)
+#### Configuration
 
-### Download & Configure WordPress
+1. Copy `provision/default.yml` to `site.yml`.
+1. Edit the `site.yml`.
+1. Run `vagrant up`.
 
-Install WordPress using WP-CLI and the information on `wordpress.txt`
+#### Note
 
-	$ cd app/wordpress/
-	$ wp core download --version=x.xx
-	$ wp core config --dbname=database_name --dbuser=root --dbpass=password --dbhost=127.0.0.1
-	
-If for some reason configuring on the command line does not work, then configure using the WordPress GUI.
+* The `site.yml` has to be in the same directory with Vagrantfile.
+* You can put difference to the `site.yml`.
 
 ### Run NPM Install (or why not try Yarn?)
 
@@ -105,12 +97,10 @@ Run the default gulp task and start developing!
 	
 	$ gulp
 
-
 ## Important Notes
 ***
-Only the contents of `wordpress-project/ root` (except `node_modules/`) and `app/wordpress-theme-source/` are kept under version control. This is so that WordPress and compiled files are not commited to the repository. 
 
-If you wish to preview and test the production version of the site you should run the Build Grunt Process. 
+If you wish to preview and test the production version of the site you should run the Build Gulp Process. 
 
 	$ gulp build:production
 

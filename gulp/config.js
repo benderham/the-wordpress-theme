@@ -1,5 +1,5 @@
-var src = 'app/website-source';
-var build = 'app/wordpress/wp-content/themes/the-theme/';
+var src = '_app/_src';
+var build = '_app/wordpress/wp-content/themes/the-theme/';
 
 module.exports = {
 
