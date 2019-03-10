@@ -9,7 +9,7 @@ browsersync: {
       //   baseDir: [build]
       // },
       proxy: {
-        target: "http://wordpress.dev",
+        target: "http://the-wordpress-theme",
         ws: true
       },
       port: 8080,
@@ -30,11 +30,6 @@ browsersync: {
   scripts: {
     src:  src + '/js/**/*.js',
     dest: build + '/js/'
-  },
-
-  pug: {
-    src:  src + '/pug/**/*.pug',
-    dest: build
   },
 
   vendorScripts: {

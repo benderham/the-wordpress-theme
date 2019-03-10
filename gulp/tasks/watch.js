@@ -6,7 +6,6 @@ var config = require('../config').watch;
  */
 gulp.task('watch', ['browsersync'], function() {
   gulp.watch(config.sass, ['scss']);
-  gulp.watch(config.pug, ['pug']);
   gulp.watch(config.images, ['images']);
   gulp.watch(config.scripts, ['scripts']);
   gulp.watch(config.templates, ['templates']);
