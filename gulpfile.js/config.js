@@ -27,13 +27,13 @@ module.exports = {
   },
 
   scripts: {
-    src: src + "/js/**/*.js",
+    src: src + "/js/*.js",
     dest: build + "/js/",
   },
 
   vendorScripts: {
-    src: [],
-    dest: build + "/js/vendor",
+    src: src + "/js/vendor/*.js",
+    dest: build + "/js/vendor/",
   },
 
   autoprefixer: {
@@ -49,7 +49,8 @@ module.exports = {
   watch: {
     sass: src + "/scss/**/*.{sass,scss}",
     images: src + "/images/**/*",
-    scripts: src + "/js/**/*",
+    scripts: src + "/js/*",
+    vendorScripts: src + "/js/vendor/*",
     templates: src + "/theme-templates/**/*",
   },
 
