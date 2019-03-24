@@ -1,8 +1,9 @@
-var gulp = require("gulp");
-var babel = require("gulp-babel");
-var uglify = require("gulp-uglify");
-var concat = require("gulp-concat");
-var config = require("./config");
+const gulp = require("gulp");
+const babel = require("gulp-babel");
+const uglify = require("gulp-uglify");
+const concat = require("gulp-concat");
+const size = require("gulp-size");
+const config = require("./config");
 
 function scripts(cb) {
   gulp
@@ -21,6 +22,7 @@ function vendorScripts(cb) {
   gulp
     .src(config.vendorScripts.src)
     .pipe(concat("vendor.js"))
+    .pipe(size({ title: "vendorScripts" }))
     .pipe(gulp.dest(config.vendorScripts.dest));
 
   cb();
@@ -35,6 +37,7 @@ function scriptsMin(cb) {
       })
     )
     .pipe(uglify())
+    .pipe(size({ title: "scripts" }))
     .pipe(gulp.dest(config.scripts.dest));
 
   cb();

@@ -1,5 +1,5 @@
 const src = "app/website-source";
-const build = "app/wordpress/wp-content/themes/the-theme/";
+const build = "app/wordpress/wp-content/themes/the-theme";
 
 module.exports = {
   browsersync: {

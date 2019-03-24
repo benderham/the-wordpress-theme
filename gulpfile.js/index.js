@@ -5,6 +5,7 @@ const { scssTask, scssMin } = require("./scss");
 const { images, favicons } = require("./images");
 const { scripts, vendorScripts, scriptsMin } = require("./scripts");
 const templates = require("./templates");
+const themeZip = require("./themeZip");
 const clean = require("./del");
 
 module.exports.default = gulp.series(
@@ -20,7 +21,14 @@ module.exports.default = gulp.series(
   ),
   browserSync
 );
+
 module.exports.buildProduction = gulp.series(
   clean,
   gulp.parallel(scssMin, images, favicons, scriptsMin, vendorScripts, templates)
+);
+
+module.exports.buildZip = gulp.series(
+  // clean,
+  gulp.parallel(scssMin, images, favicons, scriptsMin, vendorScripts, templates),
+  themeZip
 );

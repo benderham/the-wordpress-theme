@@ -1,8 +1,12 @@
-var gulp = require("gulp");
-var config = require("./config").templates;
+const gulp = require("gulp");
+const size = require("gulp-size");
+const config = require("./config").templates;
 
 function templates(cb) {
-  gulp.src(config.src).pipe(gulp.dest(config.dest));
+  gulp
+    .src(config.src)
+    .pipe(size({ title: "templates" }))
+    .pipe(gulp.dest(config.dest));
   cb();
 }
 

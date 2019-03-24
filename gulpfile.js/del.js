@@ -2,7 +2,7 @@ const del = require("del");
 const config = require("./config");
 
 function clean(cb) {
-  del(config.dist + "*");
+  del(config.dist + "/*");
   cb()
 }
 

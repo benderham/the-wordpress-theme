@@ -1,7 +1,8 @@
-var gulp = require("gulp");
-var imagemin = require("gulp-imagemin");
-var imageminPngquant = require("imagemin-pngquant");
-var config = require("./config");
+const gulp = require("gulp");
+const imagemin = require("gulp-imagemin");
+const imageminPngquant = require("imagemin-pngquant");
+const size = require("gulp-size");
+const config = require("./config");
 
 function images(cb) {
   gulp
@@ -13,6 +14,7 @@ function images(cb) {
         use: [imageminPngquant()],
       })
     )
+    .pipe(size({ title: "images" }))
     .pipe(gulp.dest(config.image.dest));
   cb();
 }
