@@ -15,6 +15,9 @@ node_modules/
 .AppleDouble
 .LSOverride
 
+# zipped files
+app/*.zip
+
 # Icon must ends with two \r.
 Icon
 
