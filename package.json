@@ -1,6 +1,10 @@
 {
   "name": "wordpress-project",
   "version": "3.0.0",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp buildProduction"
+  },
   "devDependencies": {
     "babel-preset-es2015": "^6.13.2",
     "browser-sync": "^2.26.3",
