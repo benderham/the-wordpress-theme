@@ -6,10 +6,6 @@ This README.md also doubles up as a template for you to use on your project.
 Please feel free to contribute to this project, just fork it and go nuts!
 Any bugs, issues, questions, suggestions, praise (sorry complaints department closed permanently), [Email Me!](mailto:ben@benderham.com)
 
-### Included Bits and Pieces
-[jQuery](http://www.jquery.com) - Queued up, just the way WordPress likes it to be.
-[Modernizr](http://modernizr.com)  
-
 ### Recommended Coding Standards and Documentation
 [HTML5](http://html5doctor.com/element-index/)
 
@@ -19,7 +15,6 @@ Any bugs, issues, questions, suggestions, praise (sorry complaints department cl
 	
 	wordpress-project/  
 	-- app/
-	-- bower_components/
 	-- node_modules/  
 	
 	---- website-source/
@@ -36,8 +31,8 @@ Any bugs, issues, questions, suggestions, praise (sorry complaints department cl
 	-------- themes/
 	---------- the-theme/
 
-### Important Files
-`gulpfile.js` and '/gulp'
+### Important Folder
+`/gulpfile.js`
 Configuration of Gulp tasks.
 
 `package.json`  
@@ -62,10 +57,6 @@ Automates tasks such as minification, concatenation, compression, compilation, b
 **Recommended: [WP-CLI](http://wp-cli.org)**  
 WP-CLI is a set of command-line tools for managing WordPress installations. You can update plugins, set up multisite installs and much more, without using a web browser.
 
-### JavaScript Libraries Used
-[jQuery](http://www.jquery.com)  
-[Modernizr](http://modernizr.com)  
-
 ## Get Started
 ***
 ### STOP!
@@ -84,6 +75,7 @@ Prepare a local development environment inside `app/wordpress/`, using your favo
 
 [MAMP/MAMP Pro - OSX](http://codex.wordpress.org/Installing_WordPress_Locally_on_Your_Mac_With_MAMP)  
 [WampServer - Windows](https://make.wordpress.org/core/handbook/installing-a-local-server/installing-wampserver/)
+[Local by Flywheel](https://localbyflywheel.com) -- Free
 
 ### Download & Configure WordPress
 
@@ -101,21 +93,27 @@ If for some reason configuring on the command line does not work, then configure
 
 ### Run Gulp
 
-Run the default gulp task and start developing! 
+Run the default npm dev task and start developing! 
 	
-	$ gulp
+	$ npm run dev
 
 
 ## Important Notes
 ***
 Only the contents of `wordpress-project/ root` (except `node_modules/`) and `app/wordpress-theme-source/` are kept under version control. This is so that WordPress and compiled files are not commited to the repository. 
 
-If you wish to preview and test the production version of the site you should run the Build Grunt Process. 
+If you wish to build the production version of the site run
 
-	$ gulp build:production
+  $ npm run build
+
+To build the production version and create a zip file in the /app directory run
+
+  $npm run zip
 
 ## Changelog
 ***
+**v3.0** - Migrated to Gulp 4.0, removed redundant libs, added a zip task.
+
 **v2.0** - Migrated to Gulp instead of Grunt.
 
 **v1.1** - A few minor tweaks to README.md and removal of Bourbon Neat, in favour of using flexbox for layouts.
