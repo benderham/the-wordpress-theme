@@ -113,6 +113,11 @@ function my_deregister_scripts(){
 }
 add_action( 'wp_footer', 'my_deregister_scripts' );
 
+// Removes Gutenberg styles from being loaded
+// add_action( 'wp_enqueue_scripts', function() {
+//   wp_dequeue_style( 'wp-block-library' );
+// } );
+
 /**
  * Theme Supports
  **/
