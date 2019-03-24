@@ -1,9 +1,9 @@
-var gulp = require('gulp');
-var config = require('./config').templates;
+var gulp = require("gulp");
+var config = require("./config").templates;
 
-function templates() {
-  return gulp.src(config.src)
-  .pipe(gulp.dest(config.dest));
+function templates(cb) {
+  gulp.src(config.src).pipe(gulp.dest(config.dest));
+  cb();
 }
 
 module.exports = templates;

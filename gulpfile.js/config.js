@@ -1,5 +1,5 @@
-var src = "app/website-source";
-var build = "app/wordpress/wp-content/themes/the-theme/";
+const src = "app/website-source";
+const build = "app/wordpress/wp-content/themes/the-theme/";
 
 module.exports = {
   browsersync: {
@@ -49,6 +49,7 @@ module.exports = {
   watch: {
     sass: src + "/scss/**/*.{sass,scss}",
     images: src + "/images/**/*",
+    favicons: src + "/root-images/*",
     scripts: src + "/js/*",
     vendorScripts: src + "/js/vendor/*",
     templates: src + "/theme-templates/**/*",

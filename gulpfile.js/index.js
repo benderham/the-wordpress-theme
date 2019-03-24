@@ -1,27 +1,26 @@
 const gulp = require("gulp");
 const watch = require("./watch");
 const browserSync = require("./browserSync").server;
-const scssTask = require("./scss").scssTask;
-const scssMin = require("./scss").scssMin;
-const images = require("./images");
-const scripts = require("./scripts").scripts;
-const vendorScripts = require("./scripts").vendorScripts;
-const scriptsMin = require("./scripts").scriptsMin;
+const { scssTask, scssMin } = require("./scss");
+const { images, favicons } = require("./images");
+const { scripts, vendorScripts, scriptsMin } = require("./scripts");
 const templates = require("./templates");
+const clean = require("./del");
 
 module.exports.default = gulp.series(
-  scssTask,
-  images,
-  scripts,
-  vendorScripts,
-  templates,
-  watch,
+  clean,
+  gulp.parallel(
+    scssTask,
+    images,
+    favicons,
+    scripts,
+    vendorScripts,
+    templates,
+    watch
+  ),
   browserSync
 );
 module.exports.buildProduction = gulp.series(
-  scssMin,
-  images,
-  scriptsMin,
-  vendorScripts,
-  templates
+  clean,
+  gulp.parallel(scssMin, images, favicons, scriptsMin, vendorScripts, templates)
 );
