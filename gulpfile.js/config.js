@@ -65,4 +65,5 @@ module.exports = {
     dest: build,
   },
 
+  dist: build,
 };
