@@ -102,6 +102,10 @@ function the_assets()
   }
 }
 
+// Remove emoji styles
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');
+
 /**
  * Theme Supports
  **/
@@ -187,4 +191,3 @@ function is_blog()
 if (function_exists('acf_add_options_page')) {
   acf_add_options_page('Options');
 }
-
