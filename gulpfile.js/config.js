@@ -63,19 +63,4 @@ module.exports = {
     dest: build,
   },
 
-  optimize: {
-    css: {
-      src: build + "/css/*.css",
-      dest: build + "/css/",
-      options: {
-        keepSpecialComments: 0,
-      },
-    },
-
-    js: {
-      src: build + "/js/*.js",
-      dest: build + "/js/",
-      options: {},
-    },
-  },
 };

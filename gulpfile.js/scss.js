@@ -31,7 +31,7 @@ function scssMin(cb) {
       })
     )
     .pipe(autoprefixer(config.autoprefixer))
-    .pipe(cssnano(config.optimize.css.options))
+    .pipe(cssnano())
     .pipe(gulp.dest(config.scss.dest))
     .pipe(size());
 
