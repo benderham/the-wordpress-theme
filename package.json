@@ -19,7 +19,6 @@
     "gulp-svg-sprite": "^1.2.19",
     "gulp-uglify": "^2.0.1",
     "imagemin-pngquant": "^5.0.0",
-    "include-media": "^1.4.9",
-    "require-dir": "^0.3.0"
+    "include-media": "^1.4.9"
   }
 }
