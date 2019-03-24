@@ -74,7 +74,7 @@ Prepare a local development environment inside `app/wordpress/`, using your favo
 ***IMPORTANT: Only set up your Working Environment (Virtual Host, Folder Location, PHP Version) and Import Database. Install WordPress using WP-CLI and information in wordpress.txt in the next step.***
 
 [MAMP/MAMP Pro - OSX](http://codex.wordpress.org/Installing_WordPress_Locally_on_Your_Mac_With_MAMP)  
-[WampServer - Windows](https://make.wordpress.org/core/handbook/installing-a-local-server/installing-wampserver/)
+[WampServer - Windows](https://make.wordpress.org/core/handbook/installing-a-local-server/installing-wampserver/)  
 [Local by Flywheel](https://localbyflywheel.com) -- Free
 
 ### Download & Configure WordPress
