@@ -52,7 +52,7 @@ module.exports = {
     favicons: src + "/root-images/*",
     scripts: src + "/js/*",
     vendorScripts: src + "/js/vendor/*",
-    templates: src + "/theme-templates/**/*",
+    templates: src + "/theme-templates/**/*.{php.html}",
   },
 
   favicons: {
