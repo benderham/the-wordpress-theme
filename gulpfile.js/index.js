@@ -10,15 +10,8 @@ const clean = require("./del");
 
 module.exports.default = gulp.series(
   clean,
-  gulp.parallel(
-    scssTask,
-    images,
-    favicons,
-    scripts,
-    vendorScripts,
-    templates,
-    watch
-  ),
+  gulp.parallel(scssTask, images, favicons, scripts, vendorScripts, templates),
+  watch,
   browserSync
 );
 
@@ -29,6 +22,13 @@ module.exports.buildProduction = gulp.series(
 
 module.exports.buildZip = gulp.series(
   // clean,
-  gulp.parallel(scssMin, images, favicons, scriptsMin, vendorScripts, templates),
+  gulp.parallel(
+    scssMin,
+    images,
+    favicons,
+    scriptsMin,
+    vendorScripts,
+    templates
+  ),
   themeZip
 );
