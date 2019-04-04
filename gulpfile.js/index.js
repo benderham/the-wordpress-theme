@@ -11,8 +11,8 @@ const clean = require("./del");
 module.exports.default = gulp.series(
   clean,
   gulp.parallel(scssTask, images, favicons, scripts, vendorScripts, templates),
-  watch,
-  browserSync
+  browserSync,
+  watch
 );
 
 module.exports.buildProduction = gulp.series(
