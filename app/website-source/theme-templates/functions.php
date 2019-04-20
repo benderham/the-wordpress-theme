@@ -95,6 +95,8 @@ function the_assets()
 
     // Enqueue Stylesheets
     wp_enqueue_style('main');
+    // Enqueue fonts
+    wp_enqueue_style('lisle_fonts', "https://fonts.googleapis.com/css?family=Lato:300,400,700", false);
 
     // Enqueue Javascripts
     // wp_enqueue_script('jquery');
