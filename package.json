@@ -1,6 +1,6 @@
 {
   "name": "wordpress-project",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "scripts": {
     "dev": "gulp",
     "build": "gulp buildProduction",

@@ -87,7 +87,7 @@ Install WordPress using WP-CLI and the information on `wordpress.txt`
 	
 If for some reason configuring on the command line does not work, then configure using the WordPress GUI.
 
-### Run NPM Install (or why not try Yarn?)
+### Run NPM Install
 
 	$ npm install
 
@@ -112,6 +112,8 @@ To build the production version and create a zip file in the /app directory run
 
 ## Changelog
 ***
+**v3.1** - Updated the gulp tasks, added js concat, added browsersync streaming for CSS.
+
 **v3.0** - Migrated to Gulp 4.0, removed redundant libs, added a zip task.
 
 **v2.0** - Migrated to Gulp instead of Grunt.
