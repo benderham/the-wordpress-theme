@@ -8,6 +8,7 @@ const config = require("./config");
 function scripts(cb) {
   gulp
     .src(config.scripts.src)
+    .pipe(concat('main.js'))
     .pipe(
       babel({
         presets: ["es2015"],

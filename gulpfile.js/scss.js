@@ -2,6 +2,7 @@ const gulp = require("gulp");
 const scss = require("gulp-sass");
 const sourcemaps = require("gulp-sourcemaps");
 const autoprefixer = require("gulp-autoprefixer");
+const server = require("browser-sync").create();
 const config = require("./config");
 const cssnano = require("gulp-cssnano");
 const size = require("gulp-size");
@@ -17,7 +18,8 @@ function scssTask(cb) {
     .pipe(autoprefixer(config.autoprefixer))
     .pipe(sourcemaps.init())
     .pipe(sourcemaps.write("."))
-    .pipe(gulp.dest(config.scss.dest));
+    .pipe(gulp.dest(config.scss.dest))
+    .pipe(server.stream());
 
   cb();
 }
