@@ -8,11 +8,14 @@ function images(cb) {
   gulp
     .src(config.image.src)
     .pipe(
-      imagemin({
-        progressive: true,
-        svgoPlugins: [{ removeViewBox: false }],
-        use: [imageminPngquant()],
-      })
+      imagemin([
+        imagemin.gifsicle({ interlaced: true }),
+        imagemin.jpegtran({ progressive: true }),
+        imagemin.optipng({ optimizationLevel: 5 }),
+        imagemin.svgo({
+          plugins: [{ removeViewBox: false }, { cleanupIDs: false }],
+        }),
+      ])
     )
     .pipe(size({ title: "images" }))
     .pipe(gulp.dest(config.image.dest));
