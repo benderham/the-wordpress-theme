@@ -4,9 +4,6 @@ const build = "./wordpress/wp-content/themes/the-theme";
 module.exports = {
   browsersync: {
     development: {
-      // server: {
-      //   baseDir: [build]
-      // },
       proxy: {
         target: "http://wordpress.localhost",
         ws: true,
@@ -27,13 +24,8 @@ module.exports = {
   },
 
   scripts: {
-    src: src + "/js/*.js",
+    src: src + "/js/main.js",
     dest: build + "/js/",
-  },
-
-  vendorScripts: {
-    src: src + "/js/vendor/*.js",
-    dest: build + "/js/vendor/",
   },
 
   autoprefixer: {

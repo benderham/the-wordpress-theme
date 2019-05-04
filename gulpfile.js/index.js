@@ -3,21 +3,21 @@ const watch = require("./watch");
 const browserSync = require("./browserSync").server;
 const { scssTask, scssMin } = require("./scss");
 const { images, favicons } = require("./images");
-const { scripts, vendorScripts, scriptsMin } = require("./scripts");
+const { scripts, scriptsMin } = require("./scripts");
 const templates = require("./templates");
 const themeZip = require("./themeZip");
 const clean = require("./del");
 
 module.exports.default = gulp.series(
   clean,
-  gulp.parallel(scssTask, images, favicons, scripts, vendorScripts, templates),
+  gulp.parallel(scssTask, images, favicons, scripts, templates),
   browserSync,
   watch
 );
 
 module.exports.buildProduction = gulp.series(
   clean,
-  gulp.parallel(scssMin, images, favicons, scriptsMin, vendorScripts, templates)
+  gulp.parallel(scssMin, images, favicons, scriptsMin, templates)
 );
 
 module.exports.buildZip = gulp.series(
@@ -27,7 +27,6 @@ module.exports.buildZip = gulp.series(
     images,
     favicons,
     scriptsMin,
-    vendorScripts,
     templates
   ),
   themeZip
