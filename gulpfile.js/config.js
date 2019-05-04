@@ -1,4 +1,4 @@
-const src = "app/website-source";
+const src = "app/src";
 const build = "app/wordpress/wp-content/themes/the-theme";
 
 module.exports = {
@@ -8,7 +8,7 @@ module.exports = {
       //   baseDir: [build]
       // },
       proxy: {
-        target: "http://the-wordpress-theme",
+        target: "http://wordpress.localhost",
         ws: true,
       },
       port: 8080,
