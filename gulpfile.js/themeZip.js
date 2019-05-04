@@ -7,7 +7,7 @@ function themeZip(cb) {
   gulp
     .src(config.dist + "/**")
     .pipe(zip("_the_theme.zip"))
-    .pipe(gulp.dest("./app/"))
+    .pipe(gulp.dest("./"))
     .pipe(size({ title: "theme" }));
   cb();
 }
