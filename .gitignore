@@ -1,5 +1,5 @@
 # Ignore everything to do with WordPress including built theme
-app/wordpress/
+wordpress/
 
 # Package Dependencies
 npm-debug.log
@@ -16,7 +16,7 @@ node_modules/
 .LSOverride
 
 # zipped files
-app/*.zip
+*.zip
 
 # Icon must ends with two \r.
 Icon
@@ -30,3 +30,7 @@ Icon
 
 # VS Code
 .vscode
+
+
+# Parcel cache
+.cache/
