@@ -10,13 +10,13 @@ const size = require("gulp-size");
 function scssTask(cb) {
   gulp
     .src(config.scss.src)
+    .pipe(sourcemaps.init())
     .pipe(
       scss().on("error", err => {
         console.error(err);
       })
     )
     .pipe(autoprefixer(config.autoprefixer))
-    .pipe(sourcemaps.init())
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest(config.scss.dest))
     .pipe(server.stream());
